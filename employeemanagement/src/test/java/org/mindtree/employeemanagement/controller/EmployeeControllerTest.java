@@ -25,7 +25,6 @@ import org.springframework.web.context.WebApplicationContext;
 @ContextConfiguration(classes = ApplicationStart.class)
 @SpringBootTest
 public class EmployeeControllerTest {
-
 	private MockMvc mockmvc;
 	
 	@Mock
