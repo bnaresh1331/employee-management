@@ -48,8 +48,7 @@ public class EmployeeServiceTest {
 		when(employeeRepository.findAll()).thenReturn((List<Employee>) employeeList);		
 		Collection<Employee> result = employeeServiceBean.getAllEmplyeeDetails();
 		assertEquals(3, result.size());
-	}
-	
+	}	
 	@Test
 	public void getEmployeeById(){
 		Employee employee=new Employee(6, "Manoj", "Manoj123", "Manojp", "manoj@mindtree.com", "08jun2002", "male", "your name", "manoj");
