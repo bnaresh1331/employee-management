@@ -99,7 +99,7 @@ public class EmployeeControllerTest {
 		mockmvc.perform(MockMvcRequestBuilders.get("/empMgt/getByEmpId/9").accept(MediaType.APPLICATION_JSON_VALUE))
 			.andExpect(jsonPath("$.message").value("Record Not Found"))
 			.andDo(print());
-	}
+		}
 	
 	@Test
 	public void verifyInvalidDeleteId() throws Exception {
