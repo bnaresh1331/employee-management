@@ -31,8 +31,7 @@ public class EmployeeControllerTest {
 	EmployeeService mockEmpService;
 	
 	@InjectMocks
-	EmployeeController mockEmpController;
-	
+	EmployeeController mockEmpController;	
 	
 	@Autowired
 	private WebApplicationContext wac;
