@@ -63,8 +63,7 @@ public class EmployeeServiceTest {
 		assertEquals("male", result.getGender());		
 		assertEquals("your name", result.getSecurityQuestion());
 		assertEquals("manoj", result.getSecurityAnswer());
-	}
-	
+	}	
 	
 	@Test
 	public void addEmployee(){
