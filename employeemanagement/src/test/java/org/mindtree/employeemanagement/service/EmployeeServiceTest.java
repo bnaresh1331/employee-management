@@ -26,7 +26,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = ApplicationStart.class)
 @SpringBootTest
 public class EmployeeServiceTest {
-
 	@Mock
 	private EmployeeRepository employeeRepository;
 	
