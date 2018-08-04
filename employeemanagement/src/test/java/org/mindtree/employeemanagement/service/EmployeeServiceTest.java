@@ -63,8 +63,7 @@ public class EmployeeServiceTest {
 		assertEquals("male", result.getGender());		
 		assertEquals("your name", result.getSecurityQuestion());
 		assertEquals("manoj", result.getSecurityAnswer());
-	}	
-	
+	}		
 	@Test
 	public void addEmployee(){
 		Employee employee=new Employee(6, "Manoj", "Manoj123", "Manojp", "manoj@mindtree.com", "08jun2002", "male", "your name", "manoj");
