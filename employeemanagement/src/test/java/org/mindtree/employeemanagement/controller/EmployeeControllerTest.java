@@ -106,8 +106,7 @@ public class EmployeeControllerTest {
 				.content(
 						"{\"empId\": \"5\", \"userName\" : \"Manoj\",\"password\":\"Naresh1234\", \"fullName\": \"NareshP\",\"emailId\": \"naresh.p@mindtree.com\",\"dateOfBirth\": \"08jun2018\",\"gender\": \"male\",\"securityQuestion\": \"Your Name\",\"securityAnswer\": \"Naresh\"}")
 				.accept(MediaType.APPLICATION_JSON)).andExpect(jsonPath("$.id").doesNotExist()).andDo(print());
-		}
-	
+		}	
 	@Test
 	public void verifyNoUserExit() throws Exception {
 		mockmvc.perform(MockMvcRequestBuilders.post("/empMgt/checkLogin").contentType(MediaType.APPLICATION_JSON_VALUE)
