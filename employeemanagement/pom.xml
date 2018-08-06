@@ -122,5 +122,6 @@
    <version>1.1.0</version>
  </plugin> 
 </plugins>
+<finalName>empdemo</finalName> 
 </build>
 </project>
