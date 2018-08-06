@@ -2,6 +2,8 @@ package org.mindtree.employeemanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
@@ -18,7 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @EnableCaching
-public class ApplicationStart {
+public class ApplicationStart extends SpringBootServletInitializer {
 	
 	public static void main(String[] args) throws Exception {
 	SpringApplication.run(ApplicationStart.class, args);
@@ -37,4 +39,9 @@ public class ApplicationStart {
 				.apis(RequestHandlerSelectors.basePackage("org.mindtree.employeemanagement.web.api"))
 				.paths(PathSelectors.any()).build();
 	}
+	@Override
+	protected SpringApplicationBuilder configure( SpringApplicationBuilder builder) {
+		
+		return builder.sources(ApplicationStart.class);
+	} 
 }
