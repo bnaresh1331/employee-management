@@ -1,4 +1,5 @@
-FROM microsoft/windowsservercore
+#FROM microsoft/windowsservercore
+From tomcat:8-jre8
 COPY target/empdemo.war app.war
 EXPOSE 9000
 #ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar app.war"]
