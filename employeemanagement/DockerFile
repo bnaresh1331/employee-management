@@ -2,3 +2,7 @@ FROM openjdk:8-jdk-alpine
 COPY target/empdemo.war app.war
 EXPOSE 9000
 ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar app.war"]
+ ## allowing jenkins user to run sudo commands
+RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+ ## avoid typing sudo in command line
+RUN echo "alias docker='sudo docker '" >> /home/jenkins/.bashrc
