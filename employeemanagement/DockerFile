@@ -1,4 +1,4 @@
 FROM java:8
 EXPOSE 9000
-ADD C:\Program Files (x86)\Jenkins\workspace\EmployeeMangement\employeemanagement\target\empdemo.war empdemo.war
+ADD target/empdemo.war empdemo.war
 ENTRYPOINT ["Java","-jar","empdemo.war"]
