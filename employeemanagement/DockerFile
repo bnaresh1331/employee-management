@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM java:8
 COPY target/empdemo.war app.war
 EXPOSE 9000
 ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar app.war"]
