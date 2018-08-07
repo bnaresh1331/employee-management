@@ -1,7 +1,6 @@
-FROM java:8
+FROM microsoft/windowsservercore
 COPY target/empdemo.war app.war
 EXPOSE 9000
 ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar app.war"]
  ## allowing jenkins user to run sudo commands
 RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
