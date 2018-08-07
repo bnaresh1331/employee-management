@@ -1,24 +1,4 @@
-FROM microsoft/windowsservercore
-#From tomcat:8-jre8
-COPY target/empdemo.war app.war
+FROM Java:8
 EXPOSE 9000
-#ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar app.war"]
- ## allowing jenkins user to run sudo commands
-#RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-
-
-#FROM tomcat
-#COPY target/empdemo.war app.war
-#EXPOSE 9000
-
-#MAINTAINER richard
-
-#RUN apt-get update && apt-get -y upgrade
-
-#WORKDIR /usr/local/tomcat
-
-#COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
-#COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
-
-#EXPOSE 9000
+ADD C:\Program Files (x86)\Jenkins\workspace\EmployeeMangement\employeemanagement\target\empdemp.war empdemo.war
+ENTRYPOINT ["Java","-jar","empdemo.war"]
