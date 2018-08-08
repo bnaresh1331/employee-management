@@ -13,7 +13,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
-@CacheConfig
+//@CacheConfig
 public class EmployeeServiceBean implements EmployeeService{
 
 	private static final Logger log=LoggerFactory.getLogger(EmployeeServiceBean.class);
@@ -31,7 +31,7 @@ public class EmployeeServiceBean implements EmployeeService{
 		return employeeRepository.findOne(id);
 	}
 	@Override
-	@Cacheable(value="employee.all")
+//	@Cacheable(value="employee.all")
 	public Collection<Employee> getAllEmplyeeDetails() {
 		log.info("Inside Employee service getAllEmployeeDetails method");
 		return employeeRepository.findAll();
