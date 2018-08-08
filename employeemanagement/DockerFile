@@ -1,3 +1,3 @@
 FROM tomcat:8-jre8
-ADD target/empdemo.war webapp/
+Copy target/empdemo.war webapp/
 EXPOSE 8888
