@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore
-#From tomcat:8-jre8
-COPY target/empdemo.war empdemo.war
+FROM java:8
 EXPOSE 9000
+ADD target/empdemo.war empdemo.war
+ENTRYPOINT ["Java","-jar","empdemo.war"]
